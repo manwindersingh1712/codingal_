@@ -76,7 +76,7 @@ function Modal(props) {
               <span id="custom_radio">
                 <i className="fas fa-check"></i>
               </span>
-              Students didn't show up htmlFor class.
+              Students didn't show up for class.
             </label>
             <label htmlFor="interset">
               <input

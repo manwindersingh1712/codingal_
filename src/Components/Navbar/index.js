@@ -21,7 +21,11 @@ class Navbar extends React.PureComponent {
 
           <div className="right">
             <div className="timer">
-              <Timer time={this.props.time} setTime={this.props.setTime} />
+              <Timer
+                min={this.props.min}
+                sec={this.props.sec}
+                setTime={this.props.setTime}
+              />
             </div>
             <div className="end_class">
               <button

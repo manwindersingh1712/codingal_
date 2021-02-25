@@ -31,6 +31,38 @@
   background-color: white;
   position: relative;
 }
+@media (max-width: 550px) {
+  .modal_container .container {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 450px) {
+  .modal_container .container {
+    transform: scale(0.75);
+  }
+}
+@media (max-width: 408px) {
+  .modal_container .container {
+    padding: 30px;
+  }
+  .modal_container .container h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 350px) {
+  .modal_container .container {
+    /* padding: 20px; */
+  }
+  .modal_container .container h2 {
+    font-size: 17px;
+  }
+  .modal_container label {
+    font-size: 14px;
+  }
+  .modal_container ul label {
+    font-size: 13px;
+  }
+}
 
 .modal_container .container h2 {
   font-weight: 900;

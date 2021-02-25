@@ -1,36 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar/index";
 import Modal from "./Components/Modal/index";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      min: 10,
-      sec: 0,
-      show: false,
-    };
-  }
-  setTime = ({ min, sec }) => {
-    this.setState({ min: min, sec: sec });
-  };
-  setShow = (bool) => {
-    this.setState({ show: bool });
+function App() {
+  const [min, setMin] = useState(10);
+  const [sec, setSec] = useState(0);
+  const [show, setShow] = useState(false);
+
+  const setTime = ({ min, sec }) => {
+    setMin(min);
+    setSec(sec);
+    // this.setState({ min: min, sec: sec });
   };
 
-  render() {
-    return (
-      <div className="App">
-        <Navbar
-          time={this.state}
-          setTime={this.setTime}
-          setShow={this.setShow}
-        />
-        <Modal show={this.state.show} setShow={this.setShow} />
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <Navbar min={min} sec={sec} setTime={setTime} setShow={setShow} />
+      <Modal show={show} setShow={setShow} />
+    </div>
+  );
 }
 
 export default App;
