@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import Navbar from "./Components/navbar";
-import NavbarRes from "./Components/navbar_mb";
-import Modal from "./Components/modal";
+import Navbar from "./Components/Navbar/index";
+import Modal from "./Components/Modal/index";
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +27,6 @@ class App extends React.Component {
           setTime={this.setTime}
           setShow={this.setShow}
         />
-        <NavbarRes time={this.state} setTime={this.setTime} />
         {this.state.show ? <Modal setShow={this.setShow} /> : ""}
       </div>
     );
