@@ -9,7 +9,7 @@ class App extends React.Component {
     this.state = {
       min: 10,
       sec: 0,
-      show: false,
+      show: true,
     };
   }
   setTime = ({ min, sec }) => {
@@ -18,6 +18,7 @@ class App extends React.Component {
   setShow = (bool) => {
     this.setState({ show: bool });
   };
+
   render() {
     return (
       <div className="App">

@@ -33,18 +33,25 @@ class Modal extends React.Component {
           </div>
           <h2>Select a reason to end class</h2>
           <div className="reasons">
-            <div>
+            <label for="completed">
               <input
                 type="radio"
                 id="completed"
                 name="reason"
                 value="completed"
-                onChange={this.onChange}
+                onChange={(e) => {
+                  this.setState({ int_reason: "no_student", other: "" });
+                  this.onChange(e);
+                }}
                 defaultChecked="true"
               />
-              <label for="completed">Class completed</label>
-            </div>
-            <div>
+              <span id="custom_radio">
+                <i className="fas fa-check"></i>
+              </span>
+              Class completed
+            </label>
+
+            <label for="interrupted">
               <input
                 type="radio"
                 id="interrupted"
@@ -52,11 +59,15 @@ class Modal extends React.Component {
                 value="interrupted"
                 onChange={this.onChange}
               />
-              <label for="interrupted">Class interrupted/aborted</label>
-            </div>
+              <span id="custom_radio">
+                <i className="fas fa-check"></i>
+              </span>
+              Class interrupted/aborted
+            </label>
+
             {this.state.reason === "interrupted" && (
               <ul>
-                <div>
+                <label for="no_student">
                   <input
                     type="radio"
                     id="no_student"
@@ -65,11 +76,12 @@ class Modal extends React.Component {
                     onChange={this.onChange}
                     defaultChecked="true"
                   />
-                  <label for="no_student">
-                    Students didn't show up for class.
-                  </label>
-                </div>
-                <div>
+                  <span id="custom_radio">
+                    <i className="fas fa-check"></i>
+                  </span>
+                  Students didn't show up for class.
+                </label>
+                <label for="interset">
                   <input
                     type="radio"
                     id="interset"
@@ -77,11 +89,12 @@ class Modal extends React.Component {
                     value="interset"
                     onChange={this.onChange}
                   />
-                  <label for="interset">
-                    Students didn't show any interset.
-                  </label>
-                </div>
-                <div>
+                  <span id="custom_radio">
+                    <i className="fas fa-check"></i>
+                  </span>
+                  Students didn't show any interset.
+                </label>
+                <label for="disconnect">
                   <input
                     type="radio"
                     id="disconnect"
@@ -89,9 +102,12 @@ class Modal extends React.Component {
                     value="disconnect"
                     onChange={this.onChange}
                   />
-                  <label for="disconnect">Students got disconnected.</label>
-                </div>
-                <div>
+                  <span id="custom_radio">
+                    <i className="fas fa-check"></i>
+                  </span>
+                  Students got disconnected.
+                </label>
+                <label for="i_disconnect">
                   <input
                     type="radio"
                     id="i_disconnect"
@@ -99,9 +115,12 @@ class Modal extends React.Component {
                     value="i_disconnect"
                     onChange={this.onChange}
                   />
-                  <label for="i_disconnect">I got disconnected.</label>
-                </div>
-                <div>
+                  <span id="custom_radio">
+                    <i className="fas fa-check"></i>
+                  </span>
+                  I got disconnected.
+                </label>
+                <label for="other_reason">
                   <input
                     type="radio"
                     id="other_reason"
@@ -109,18 +128,21 @@ class Modal extends React.Component {
                     value="other_reason"
                     onChange={this.onChange}
                   />
-                  <label for="other_reason">Other reason.</label>
-                </div>
+                  <span id="custom_radio">
+                    <i className="fas fa-check"></i>
+                  </span>
+                  Other reason.
+                </label>
 
-                {this.state.int_reason === "other_reason" && (
-                  <div>
-                    <textarea
-                      name="other"
-                      value={this.state.other}
-                      onChange={this.onChange}
-                    ></textarea>
-                  </div>
-                )}
+                <textarea
+                  className={
+                    this.state.int_reason === "other_reason" && "active"
+                  }
+                  name="other"
+                  value={this.state.other}
+                  onChange={this.onChange}
+                  placeholder="Type here"
+                ></textarea>
               </ul>
             )}
           </div>
