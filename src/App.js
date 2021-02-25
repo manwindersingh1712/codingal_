@@ -9,7 +9,7 @@ class App extends React.Component {
     this.state = {
       min: 10,
       sec: 0,
-      show: true,
+      show: false,
     };
   }
   setTime = ({ min, sec }) => {

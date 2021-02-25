@@ -30,7 +30,7 @@
 }
 
 .modal_container .container h2 {
-  font-weight: 600;
+  font-weight: 900;
 }
 
 /* radio buttons */
@@ -56,7 +56,7 @@
 
 .modal_container textarea.active {
   display: block;
-  animation: slide 300ms linear 0s forwards;
+  animation: slide 300ms forwards;
 }
 @keyframes slide {
   0% {
@@ -68,15 +68,18 @@
 }
 .modal_container .reasons {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 15px;
 }
 
 .modal_container ul {
+  display: none;
   margin: 0;
   padding-left: 20px;
+  grid-gap: 15px;
+}
+
+.modal_container ul.active {
   display: grid;
-  grid-gap: 10px;
-  transition: all 300ms ease-in-out;
 }
 
 /* end button */
