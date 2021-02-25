@@ -27,7 +27,7 @@ class App extends React.Component {
           setTime={this.setTime}
           setShow={this.setShow}
         />
-        {this.state.show ? <Modal setShow={this.setShow} /> : ""}
+        <Modal show={this.state.show} setShow={this.setShow} />
       </div>
     );
   }

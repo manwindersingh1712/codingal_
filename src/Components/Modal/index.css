@@ -5,10 +5,13 @@
   top: 0;
   left: 0;
   background-color: rgba(255, 99, 71, 0.219);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   font-family: "Raleway", sans-serif;
+}
+.modal_container.active {
+  display: flex;
 }
 
 .modal_container .cancel {
