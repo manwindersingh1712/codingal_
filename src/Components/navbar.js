@@ -23,7 +23,13 @@ class Navbar extends React.PureComponent {
             <Timer time={this.props.time} setTime={this.props.setTime} />
           </div>
           <div className="end_class">
-            <button>End class</button>
+            <button
+              onClick={() => {
+                this.props.setShow(true);
+              }}
+            >
+              End class
+            </button>
           </div>
         </div>
       </div>
