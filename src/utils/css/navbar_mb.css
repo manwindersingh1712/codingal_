@@ -1,0 +1,35 @@
+.navbar_mb_container {
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  /* width: 100vw; */
+  position: relative;
+  height: 50px;
+}
+/* logo */
+.navbar_mb_container .logo {
+  position: absolute;
+  left: 10px;
+  display: flex;
+  align-self: center;
+}
+.navbar_mb_container .logo img {
+  height: 35px;
+}
+
+/* hamburgur */
+.navbar_mb_container .hamburger i {
+  font-size: 23px;
+  color: rgb(100, 98, 98);
+}
+.navbar_mb_container .hamburger {
+  display: flex;
+  align-self: center;
+  padding-right: 20px;
+}
+/* media querries */
+@media screen and (min-width: 550px) {
+  .navbar_mb_container {
+    display: none;
+  }
+}
