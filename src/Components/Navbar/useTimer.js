@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const useTimer = (t) => {
   const [time, setTime] = React.useState(t);
@@ -8,8 +8,8 @@ const useTimer = (t) => {
     setTimerInterval((interval) => {
       if (interval) {
         clearInterval(interval);
-        return null;
       }
+      return null;
     });
 
   React.useEffect(() => {
@@ -27,7 +27,7 @@ const useTimer = (t) => {
 
           return { min, sec };
         }),
-      1000,
+      1000
     );
 
     setTimerInterval(interval);
