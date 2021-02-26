@@ -1,98 +1,38 @@
-.modal_container {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: rgba(255, 99, 71, 0.219);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  font-family: "Raleway", sans-serif;
-}
-
-.modal_container .cancel {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  font-size: 30px;
-  color: gray;
-  cursor: pointer;
-}
-
-.modal_container.active {
-  display: flex;
-}
-
-.modal_container .container {
-  width: 400px;
-  height: max-content;
-  padding: 50px;
-  border-radius: 10px;
-  background-color: white;
-}
-.modal_container .container.active {
-  position: relative;
-  animation: slidedown 300ms forwards;
-  top: -100px;
-}
-@keyframes slidedown {
-  0% {
-    top: -100px;
-  }
-  100% {
-    top: 0;
-  }
-}
-
-@media (max-width: 550px) {
-  .modal_container .container {
-    transform: scale(0.8);
-  }
-}
-@media (max-width: 450px) {
-  .modal_container .container {
-    transform: scale(0.75);
-  }
-}
 @media (max-width: 408px) {
-  .modal_container .container {
-    padding: 30px;
-  }
-  .modal_container .container h2 {
+  .end-class-modal h2 {
     font-size: 20px;
   }
 }
 @media (max-width: 350px) {
-  .modal_container .container {
+  .end-class-modal {
     /* padding: 20px; */
   }
-  .modal_container .container h2 {
+  .end-class-modal h2 {
     font-size: 17px;
   }
-  .modal_container label {
+  .end-class-modal label {
     font-size: 14px;
   }
-  .modal_container ul label {
+  .end-class-modal ul label {
     font-size: 13px;
   }
 }
 
-.modal_container .container h2 {
+.end-class-modal h2 {
   font-weight: 900;
 }
 
 /* radio buttons */
 
-.modal_container label {
+.end-class-modal label {
   font-size: 17px;
   font-weight: 600;
 }
-.modal_container ul label {
+.end-class-modal ul label {
   font-size: 15px;
 }
 
-.modal_container textarea {
+.end-class-modal textarea {
   display: none;
   resize: none;
   width: 94%;
@@ -103,7 +43,7 @@
   color: gray;
 }
 
-.modal_container textarea.active {
+.end-class-modal textarea.active {
   display: block;
   animation: slide 300ms forwards;
 }
@@ -115,25 +55,25 @@
     height: 80px;
   }
 }
-.modal_container .reasons {
+.end-class-modal .reasons {
   display: grid;
   grid-gap: 15px;
 }
 
-.modal_container ul {
+.end-class-modal ul {
   display: none;
   margin: 0;
   padding-left: 20px;
   grid-gap: 15px;
 }
 
-.modal_container ul.active {
+.end-class-modal ul.active {
   display: grid;
 }
 
 /* end button */
 
-.modal_container button.end {
+.end-class-modal button.end {
   margin-top: 20px;
   font-size: 15px;
   background-color: tomato;
@@ -145,8 +85,8 @@
   position: relative;
 }
 
-.modal_container button.end:after {
-  content: "";
+.end-class-modal button.end:after {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -158,7 +98,7 @@
   transition: none;
 }
 
-.modal_container button.end:hover:after {
+.end-class-modal button.end:hover:after {
   width: 100%;
   background-color: rgba(255, 255, 255, 0);
   transition: all 0.5s ease-in-out;
@@ -166,7 +106,7 @@
 
 /* cancel button */
 
-.modal_container button.cancel_btn {
+.end-class-modal button.cancel_btn {
   margin-top: 20px;
   font-size: 15px;
   background-color: white;
@@ -178,22 +118,22 @@
   position: relative;
 }
 
-.modal_container button.cancel_btn:hover {
+.end-class-modal button.cancel_btn:hover {
   text-decoration: underline;
   color: black;
 }
 
 /* big custom made radio buttons */
 
-.modal_container input[type="radio"] {
+.end-class-modal input[type='radio'] {
   display: none;
 }
-.modal_container input[type="radio"] label {
+.end-class-modal input[type='radio'] label {
   position: relative;
   display: inline-flex;
 }
 
-.modal_container #custom_radio {
+.end-class-modal #custom_radio {
   border: 1px solid gray;
   background-color: white;
   margin-right: 10px;
@@ -207,34 +147,34 @@
   top: -3px;
 }
 
-.modal_container #custom_radio i {
+.end-class-modal #custom_radio i {
   font-size: 9px;
   color: white;
 }
 
-.modal_container input[type="radio"]:checked ~ #custom_radio {
+.end-class-modal input[type='radio']:checked ~ #custom_radio {
   background-color: tomato;
   border-color: tomato;
 }
 /* small custom made radio buttons */
 
-.modal_container ul input[type="radio"] label {
+.end-class-modal ul input[type='radio'] label {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.modal_container ul #custom_radio {
+.end-class-modal ul #custom_radio {
   transform: scale(0.8);
 }
 
-.modal_container ul #custom_radio i {
+.end-class-modal ul #custom_radio i {
   font-size: 8px;
   color: white;
 }
 
-.modal_container ul input[type="radio"]:checked ~ #custom_radio {
+.end-class-modal ul input[type='radio']:checked ~ #custom_radio {
   background-color: tomato;
   border-color: tomato;
 }
