@@ -1,0 +1,51 @@
+.slidebar_container {
+  background-color: tomato;
+  width: 100%;
+  height: calc(80vh - 50px);
+  display: flex;
+  justify-content: center;
+  padding-top: 20vh;
+  position: relative;
+  right: -100vw;
+}
+
+.slidebar_container.active {
+  animation: navbar 500ms forwards;
+}
+
+@keyframes navbar {
+  0% {
+    right: -100vw;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+.slidebar_container .timer {
+  color: white;
+  font-size: 50px;
+}
+
+.slidebar_container button {
+  width: 120px;
+  height: 35px;
+  background-color: white;
+  border-width: 0;
+  border-radius: 5px;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 3vh;
+  transition: transform 300ms ease-in-out;
+}
+
+.slidebar_container button:hover {
+  transform: scale(0.98);
+}
+
+@media (min-width: 575px) {
+  .slidebar_container {
+    display: none;
+  }
+}

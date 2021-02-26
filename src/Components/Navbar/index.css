@@ -91,7 +91,7 @@
   align-self: center;
 }
 .navbar_mb_container .logo img {
-  height: 35px;
+  height: 30px;
 }
 
 /* hamburgur */
@@ -103,9 +103,10 @@
   display: flex;
   align-self: center;
   padding-right: 20px;
+  cursor: pointer;
 }
 /* media querries */
-@media (min-width: 576px) {
+@media (min-width: 575px) {
   .navbar_mb_container {
     display: none;
   }

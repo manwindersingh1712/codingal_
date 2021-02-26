@@ -5,8 +5,8 @@ class Timer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      min: 10,
-      sec: 0,
+      min: this.props.min,
+      sec: this.props.sec,
       interval: "",
     };
   }

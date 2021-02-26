@@ -4,3 +4,7 @@ button:focus,
 textarea:focus {
   outline-width: 0;
 }
+
+body {
+  overflow: hidden;
+}
