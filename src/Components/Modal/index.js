@@ -18,7 +18,7 @@ function Modal(props) {
 
   return (
     <div className={props.show ? "modal_container active" : "modal_container"}>
-      <div className="container">
+      <div className={props.show ? "container active" : "container"}>
         <div
           className="cancel"
           onClick={() => {

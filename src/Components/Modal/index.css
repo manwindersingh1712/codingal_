@@ -10,9 +10,6 @@
   align-items: center;
   font-family: "Raleway", sans-serif;
 }
-.modal_container.active {
-  display: flex;
-}
 
 .modal_container .cancel {
   position: absolute;
@@ -23,14 +20,31 @@
   cursor: pointer;
 }
 
+.modal_container.active {
+  display: flex;
+}
+
 .modal_container .container {
   width: 400px;
   height: max-content;
   padding: 50px;
   border-radius: 10px;
   background-color: white;
-  position: relative;
 }
+.modal_container .container.active {
+  position: relative;
+  animation: slidedown 300ms forwards;
+  top: -100px;
+}
+@keyframes slidedown {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
 @media (max-width: 550px) {
   .modal_container .container {
     transform: scale(0.8);

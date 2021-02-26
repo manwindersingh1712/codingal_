@@ -27,7 +27,6 @@ class Timer extends React.Component {
       }
     }, 1000);
     this.setState({ interval: interval });
-    console.log("ended");
   }
   render() {
     return (

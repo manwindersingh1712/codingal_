@@ -6,7 +6,7 @@ import Modal from "./Components/Modal/index";
 function App() {
   const [min, setMin] = useState(10);
   const [sec, setSec] = useState(0);
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   const setTime = ({ min, sec }) => {
     setMin(min);
