@@ -5,11 +5,15 @@ class Timer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      min: this.props.min,
-      sec: this.props.sec,
+      min: 10,
+      sec: 0,
       interval: "",
     };
   }
+  onClick = () => {
+    clearInterval(this.state.interval);
+  };
+
   componentWillUnmount() {
     clearInterval(this.state.interval);
     this.props.setTime(this.state);

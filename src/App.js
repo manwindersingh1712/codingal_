@@ -4,20 +4,17 @@ import Navbar from "./Components/Navbar/index";
 import Modal from "./Components/Modal/index";
 
 function App() {
-  const [min, setMin] = useState(10);
-  const [sec, setSec] = useState(0);
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
+  const end = React.createRef();
 
-  const setTime = ({ min, sec }) => {
-    setMin(min);
-    setSec(sec);
-    // this.setState({ min: min, sec: sec });
+  const onEnd = () => {
+    end.current.onClick();
   };
 
   return (
     <div className="App">
-      <Navbar min={min} sec={sec} setTime={setTime} setShow={setShow} />
-      <Modal show={show} setShow={setShow} />
+      <Navbar ref={end} setShow={setShow} />
+      <Modal show={show} setShow={setShow} onEnd={onEnd} />
     </div>
   );
 }

@@ -13,6 +13,7 @@ function Modal(props) {
   };
 
   const onEnd = () => {
+    props.onEnd();
     props.setShow(false);
   };
 
